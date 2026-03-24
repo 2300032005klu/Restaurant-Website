@@ -1,0 +1,185 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f8f5f0;
+    color:#222;
+    line-height:1.6;
+}
+
+main{
+    max-width:1200px;
+    margin:auto;
+}
+
+.hero{
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4");
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+    color:white;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.hero button{
+    background:#b22222;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    background:#8b1a1a;
+}
+
+.menu,
+.chef,
+.reservation{
+    margin:60px 0;
+}
+
+.menu h2{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.menu > p{
+    text-align:center;
+    color:#555;
+    margin-bottom:30px;
+}
+
+.layout{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.menu-card{
+    background:white;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    transition:all 0.3s ease;
+}
+
+.menu-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    transition:transform 0.3s ease;
+}
+
+.menu-card h3{
+    padding:12px 15px 5px;
+    transition:0.3s;
+}
+
+.menu-card p{
+    padding:0 15px 8px;
+    color:#555;
+}
+
+.price{
+    font-weight:bold;
+    color:#b22222;
+    padding-bottom:15px;
+}
+
+.menu-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 6px 16px rgba(0,0,0,0.15);
+}
+
+.menu-card:hover img{
+    transform:scale(1.05);
+}
+
+.menu-card:hover h3{
+    color:#b22222;
+}
+
+.chef{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.chef img{
+    width:50%;
+    border-radius:8px;
+}
+
+.chef h2{
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.chef p{
+    color:#444;
+}
+
+.reservation{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+    border-radius:8px;
+}
+
+.reservation h2{
+    margin-bottom:10px;
+}
+
+.reservation p{
+    margin-bottom:15px;
+}
+
+.reservation button{
+    background:#b22222;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.reservation button:hover{
+    background:#8b1a1a;
+}
+
+@media (max-width:900px){
+
+    .layout{
+        grid-template-columns:1fr;
+    }
+
+    .chef{
+        flex-direction:column;
+    }
+
+    .chef img{
+        width:100%;
+    }
+}
